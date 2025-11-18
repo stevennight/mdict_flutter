@@ -40,7 +40,13 @@ Future<void> main(List<String> args) async {
       print('No close key discovered in first 50 blocks');
     }
   } else {
-    final preview = def.length <= 400 ? def : def.substring(0, 400);
+    var out = def;
+    if (out.startsWith('@@@LINK=')) {
+      final linkKey = out.substring(8).trim();
+      final def2 = await mdx.lookup(linkKey);
+      if (def2 != null) out = def2;
+    }
+    final preview = out.length <= 400 ? out : out.substring(0, 400);
     print(preview);
   }
   await mdx.close();

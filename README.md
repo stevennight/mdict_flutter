@@ -10,7 +10,7 @@ MDX/MDD 解析库（Dart/Flutter），基于 mdict-cpp 原理的复刻实现。�
 在 `pubspec.yaml` 中添加：
 ```yaml
 dependencies:
-  mdict_flutter: ^0.1.0
+  mdict_flutter: ^0.1.1
 ```
 或通过本地路径 / Git 依赖方式引入。
 

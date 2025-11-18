@@ -1,6 +1,6 @@
 name: mdict_flutter
 description: MDX/MDD 解析库，基于现有 mdict-cpp 原理的 Flutter/Dart 复刻
-version: 0.1.0
+version: 0.1.1
 environment:
   sdk: ">=2.17.0 <4.0.0"
 dependencies:

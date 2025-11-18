@@ -318,7 +318,17 @@ class MdictReader {
     final w = normalizeKey(word);
     final bytes = _getRecordBytesForKey(w);
     if (bytes == null) return null;
-    return trimNulls(String.fromCharCodes(bytes));
+    String s;
+    if (filetype == 'MDX') {
+      if (encoding == 1) {
+        s = beUtf16LeString(bytes, 0, bytes.length);
+      } else {
+        s = utf8.decode(bytes);
+      }
+    } else {
+      s = String.fromCharCodes(bytes);
+    }
+    return trimNulls(s);
   }
 
   int _lowerBoundBlockByLastKey(String w) {
