@@ -1,0 +1,10 @@
+name: mdict_flutter
+description: MDX/MDD 解析库，基于现有 mdict-cpp 原理的 Flutter/Dart 复刻
+version: 0.1.0
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+dependencies:
+dev_dependencies:
+  test: ^1.24.0
+homepage: https://github.com/Steve/mdict-cpp
+repository: https://github.com/Steve/mdict-cpp
